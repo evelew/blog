@@ -19,18 +19,16 @@ window.dispatchEvent(new window.UIEvent('scroll'))
 Então o teste fica assim:
 
 ```js
-// Renderiza o componente
+// Renderizamos o componente
 const { getByText, queryByText } = render(<ScrollDocument />)
 
-// Valida que o botão "AVANÇAR" não está presente na tela
+// Validamos que o botão "AVANÇAR" não está presente na tela
 expect(queryByText(/AVANÇAR/)).not.toBeInTheDocument()
 
-// Simula o evento de scroll
-act(() => {
-  window.dispatchEvent(new window.UIEvent('scroll'))
-})
+// Simulamos o evento de scroll
+window.dispatchEvent(new window.UIEvent('scroll'))
 
-// Valida que o botão "AVANÇAR" apareceu na tela
+// E validamos que o botão "AVANÇAR" está na tela 
 expect(getByText(/AVANÇAR/))
 ```
 
@@ -41,11 +39,20 @@ Esse teste só vai funcionar se o scroll for o scroll natural do documento, para
 O teste fica assim:
 
 ```js
+// Renderizamos o componente
+const { getByText, queryByText, getByTestId } = render(<ScrollDiv />)
+
+// Validamos que o botão "AVANÇAR" não está presente na tela
+expect(queryByText(/AVANÇAR/)).not.toBeInTheDocument()
+
 // Aqui pegamos a div por data-testid
 const wrapper = getByTestId('scroller-container')
 
 // E aqui simulamos o evento de scroll diretamente na DIV
 wrapper.dispatchEvent(new window.UIEvent('scroll'))
+
+// Validamos que o botão "AVANÇAR" está na tela 
+expect(getByText(/AVANÇAR/))
 ```
 
 Se alguém tiver outra maneira de testar esse comportamento pode falar comigo no [twitter](https://twitter.com/eveleww) ou no [linkedin](https://www.linkedin.com/in/evellyn-lima-88638379/).
