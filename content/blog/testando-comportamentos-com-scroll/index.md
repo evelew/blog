@@ -1,7 +1,7 @@
 ---
 title: Testando componentes com scroll
 description: Nesse post eu mostro como testar o evento de scroll dentro de um componente
-date: "2019-10-30T23:46:37.121Z"
+date: "2019-11-04T23:00:00.121Z"
 ---
 
 Esses dias eu precisava testar o comportamento de um componente que dependia de um evento de scroll e acabei me batendo muito para encontrar a solução, por isso resolvi escrever esse post.
