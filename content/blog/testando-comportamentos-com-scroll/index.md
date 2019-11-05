@@ -1,25 +1,25 @@
 ---
-title: Testando comportamentos com scroll
-description: Testando comportamentos com scroll
+title: Testando componentes com scroll
+description: Nesse post eu mostro como testar o evento de scroll dentro de um componente
 date: "2019-10-30T23:46:37.121Z"
 ---
 
-Esses dias eu precisava testar o comportamento de um componente que dependia de um evento de scroll e acabei me batendo muito, por isso resolvi escrever esse post, pra ajudar quem está passando por isso e muito provavelmente vou acabar ajudando a Evellyn do futuro também porque eu devo esquecer dessa solução.
+Esses dias eu precisava testar o comportamento de um componente que dependia de um evento de scroll e acabei me batendo muito para encontrar a solução, por isso resolvi escrever esse post.
 
-Imagine que o componente tem o seguinte comportamento: quando é feito um scroll no documento aparece um botão "avançar".
+Imagine que o componente tem o seguinte comportamento: quando é feito um scroll no documento aparece um botão "AVANÇAR".
 
-## GIF 01
+![GIF 01](./gifs/scroll-document.gif)
 
 Para testarmos se o botão vai aparecer na tela temos que simular um scroll, para simular o scroll precisamos fazer o seguinte:
 
-```javascript
+```js
 window.dispatchEvent(new window.UIEvent('scroll'))
 ```
 
 Então o teste fica assim:
 
-```javascript
-// Renderizar o componente
+```js
+// Renderiza o componente
 const { getByText, queryByText } = render(<ScrollDocument />)
 
 // Valida que o botão "AVANÇAR" não está presente na tela
@@ -34,13 +34,13 @@ act(() => {
 expect(getByText(/AVANÇAR/))
 ```
 
-Esse teste só vai funcionar se o scroll for o scroll natural do documento, para testar um evento de scroll em uma tag HTML devemos simular o evento diretamente na tag. Então imagine o mesmo comportamento anterior, o botão "avançar" aparece após um evento de scroll, mas dessa vez o scroll precisa ser feito em uma `DIV`.
+Esse teste só vai funcionar se o scroll for o scroll natural do documento, para testar um evento de scroll em uma tag HTML devemos simular o evento diretamente na tag. Então imagine o mesmo comportamento anterior, o botão "AVANÇAR" aparece após um evento de scroll, mas dessa vez o scroll precisa ser feito em uma `DIV`.
 
-## GIF 02
+![GIF 01](./gifs/scroll-div.gif)
 
 O teste fica assim:
 
-```javascript
+```js
 // Aqui pegamos a div por data-testid
 const wrapper = getByTestId('scroller-container')
 
@@ -48,6 +48,6 @@ const wrapper = getByTestId('scroller-container')
 wrapper.dispatchEvent(new window.UIEvent('scroll'))
 ```
 
-Se alguém tiver outra maneira de testar esse comportamento pode falar comigo no [twitter](https://twitter.com/eveleww) ou abrir uma issue nesse [repositório]().
+Se alguém tiver outra maneira de testar esse comportamento pode falar comigo no [twitter](https://twitter.com/eveleww) ou no [linkedin](https://www.linkedin.com/in/evellyn-lima-88638379/).
 
 OBS: Os exemplos de testes demonstrados nesse artigo foram escritos com a biblioteca [@testing-library/react](https://github.com/testing-library/react-testing-library).

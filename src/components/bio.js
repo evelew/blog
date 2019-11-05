@@ -26,6 +26,7 @@ const Bio = () => {
           author
           social {
             twitter
+            linkedin
           }
         }
       }
@@ -54,11 +55,14 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong> who lives and works in San
-        Francisco building useful things.
-        {` `}
+        Eu sou a <strong>{author}</strong>, desenvolvedora web [por acaso] desde 2013 e a favor de JS sem ponto e vírgula.
+        <br />
         <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
+          Twitter
+        </a>
+        {` `}
+        <a href={`https://linkedin.com/in/${social.linkedin}`}>
+          LinkedIn
         </a>
       </p>
     </div>
