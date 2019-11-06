@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `E. Lima`,
     author: `Evellyn Lima`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `Site de uma desenvolvedora web [por acaso] desde 2013 e que é a favor de JS sem ponto e vírgula.`,
+    siteUrl: `https://evellynlima.com.br/`,
     social: {
       twitter: `eveleww`,
       linkedin: `evellyn-lima-88638379`
@@ -58,8 +58,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Evellyn Lima`,
+        short_name: `E. Lima`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
