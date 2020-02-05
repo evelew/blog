@@ -28,7 +28,7 @@ export function Timeout({ time }) {
 }
 ```
 
-Esse trecho de código mostra, em um primeiro momento, um parágrafo com o texto "Primeiro item" e após o tempo passado por props mostrará o texto "Segundo item".
+Esse trecho de código mostra, em um primeiro momento, um parágrafo com o texto "Primeiro item" e após um período de tempo (passado por props) mostrará o texto "Segundo item".
 
 O teste desse código fica assim:
 
@@ -67,7 +67,7 @@ test("Texto deve mudar após 5 segundos", async () => {
 })
 ```
 
-O segundo exemplo a ser testado utiliza o método "setInterval". Nós temos 3 items, a cada X tempo (passado por props) um item fica ativo, quando o último item é o ativo e é o momento de mudar de item tornamos o primeiro item ativo novamente:
+O segundo exemplo a ser testado utiliza o método "setInterval". Nós temos 3 items, a cada X tempo (passado por props) um item fica ativo, quando o último item é o ativo e é o momento de mudar de item, tornamos o primeiro item ativo novamente:
 
 (Obs: o código poderia ser escrito de uma maneira melhor/diferente, mas eu preferi deixar ele dessa maneira porque acredito que fica mais simples de ser entendido.)
 
@@ -117,9 +117,6 @@ O teste do código acima fica assim:
 import React from "react"
 import { act } from "react-dom/test-utils"
 import { render } from "@testing-library/react"
-
-import "@testing-library/jest-dom"
-import "@testing-library/jest-dom/extend-expect"
 
 import Timeout from "./"
 
