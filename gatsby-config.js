@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: `https://evellynlima.com.br/`,
     social: {
       twitter: `eveleww`,
-      linkedin: `evellyn-lima-88638379`
+      linkedin: `evellyn-lima-88638379`,
     },
   },
   plugins: [
@@ -64,7 +64,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `static/favicon.png`,
       },
     },
     `gatsby-plugin-offline`,
