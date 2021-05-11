@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `E. Lima`,
+    title: `Evellyn Lima`,
     author: `Evellyn Lima`,
     description: `Site de uma desenvolvedora web [por acaso] desde 2013 e que é a favor de JS sem ponto e vírgula.`,
     siteUrl: `https://evellynlima.com.br/`,
