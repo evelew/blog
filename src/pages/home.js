@@ -77,31 +77,23 @@ class BlogIndex extends React.Component {
               }}
             >
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas massa velit, aliquet eu blandit id, dapibus in neque.
-                Ut gravida in nisi eu luctus. Maecenas pellentesque at diam quis
-                consectetur. Nam sed velit eget elit condimentum blandit a nec
-                orci. Curabitur ex justo, tristique a arcu quis, laoreet
-                interdum nisl. Nunc et dictum metus. Aenean a ultrices massa, a
-                auctor augue. Nunc volutpat mattis est, sit amet volutpat leo
-                pellentesque sed. Nunc nec mi diam. Nam fringilla magna ut diam
-                facilisis consequat. Cras feugiat orci nec euismod luctus.
-                Maecenas eu bibendum ante.
+                Eu sou a Evellyn, tenho 25 anos, sou de Curitiba mas agora tô
+                morando em São Paulo. Gosto muito de ouvir música em qualquer
+                momento do dia, assim que acordo, no banho, lavando louça,
+                varrendo a casa, estudando e etc. Gosto de quase todo tipo de
+                música, mas o que mais ouço é funk e pop (principalmente
+                brasileiro). Gosto muito de conversar, então meus roles
+                favoritos envolvem mesa + cerveja + conversa. (acaba logo
+                quarentena!!!)
               </p>
               <p>
-                Sed faucibus faucibus enim nec egestas. Donec tincidunt viverra
-                luctus. Nam bibendum a sapien sit amet dictum. Integer mauris
-                diam, congue quis urna vitae, lacinia molestie nunc. Mauris mi
-                elit, dignissim eget vulputate eu, semper in nisl. Nullam
-                dignissim diam non elit dictum, non fermentum justo suscipit.
-                Duis vitae arcu a dolor eleifend ornare. Suspendisse tincidunt
-                elit ut magna fringilla, sed semper risus viverra. Praesent ac
-                ipsum pharetra, dapibus eros sit amet, rhoncus dui. In fermentum
-                luctus massa quis tempus. Suspendisse eget risus non enim
-                aliquam volutpat. Phasellus ultricies quis ante eu vestibulum.
-                Pellentesque id imperdiet augue, quis sagittis massa. Vestibulum
-                varius tempor lectus sed molestie. Quisque sapien nisl, aliquam
-                et velit id, faucibus fringilla eros.
+                E sobre a parte profissional, eu trabalho com frontend desde
+                2013, já passei por algumas empresas com modelos e stacks
+                diferentes e essas experiências hoje me ajudam a pensar em
+                soluções/maneiras diferentes de resolver problemas. O que mais
+                gosto de fazer é mexer com JS e refatorar/otimizar soluções. No
+                próximo bloco você consegue ver com mais detalhes quais
+                tecnologias eu tenho experiência.
               </p>
             </div>
           </div>
@@ -109,6 +101,7 @@ class BlogIndex extends React.Component {
           <div
             style={{
               alignItems: "center",
+              backgroundColor: "black",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
@@ -130,6 +123,7 @@ class BlogIndex extends React.Component {
             <div
               style={{
                 alignItems: "center",
+                color: "white",
                 display: "flex",
                 flexWrap: "wrap",
                 justifyContent: "space-between",
@@ -142,7 +136,7 @@ class BlogIndex extends React.Component {
               <div
                 style={{
                   alignItems: "center",
-                  border: "1px solid black",
+                  border: "1px solid white",
                   borderRadius: "4px",
                   display: "flex",
                   flexDirection: "column",
@@ -153,7 +147,8 @@ class BlogIndex extends React.Component {
               >
                 <h3
                   style={{
-                    fontSize: "40px",
+                    fontSize: "36px",
+                    lineHeight: "52px",
                     margin: "0",
                   }}
                 >
@@ -164,7 +159,7 @@ class BlogIndex extends React.Component {
               <div
                 style={{
                   alignItems: "center",
-                  border: "1px solid black",
+                  border: "1px solid white",
                   borderRadius: "4px",
                   display: "flex",
                   flexDirection: "column",
@@ -175,7 +170,8 @@ class BlogIndex extends React.Component {
               >
                 <h3
                   style={{
-                    fontSize: "40px",
+                    fontSize: "36px",
+                    lineHeight: "52px",
                     margin: "0",
                   }}
                 >
@@ -190,7 +186,7 @@ class BlogIndex extends React.Component {
               <div
                 style={{
                   alignItems: "center",
-                  border: "1px solid black",
+                  border: "1px solid white",
                   borderRadius: "4px",
                   display: "flex",
                   flexDirection: "column",
@@ -201,7 +197,8 @@ class BlogIndex extends React.Component {
               >
                 <h3
                   style={{
-                    fontSize: "40px",
+                    fontSize: "36px",
+                    lineHeight: "52px",
                     margin: "0",
                   }}
                 >
@@ -217,7 +214,7 @@ class BlogIndex extends React.Component {
               <div
                 style={{
                   alignItems: "center",
-                  border: "1px solid black",
+                  border: "1px solid white",
                   borderRadius: "4px",
                   display: "flex",
                   flexDirection: "column",
@@ -229,7 +226,8 @@ class BlogIndex extends React.Component {
               >
                 <h3
                   style={{
-                    fontSize: "40px",
+                    fontSize: "36px",
+                    lineHeight: "52px",
                     margin: "0",
                   }}
                 >
@@ -244,7 +242,7 @@ class BlogIndex extends React.Component {
               <div
                 style={{
                   alignItems: "center",
-                  border: "1px solid black",
+                  border: "1px solid white",
                   borderRadius: "4px",
                   display: "flex",
                   flexDirection: "column",
@@ -256,7 +254,8 @@ class BlogIndex extends React.Component {
               >
                 <h3
                   style={{
-                    fontSize: "40px",
+                    fontSize: "36px",
+                    lineHeight: "52px",
                     margin: "0",
                   }}
                 >
@@ -270,7 +269,7 @@ class BlogIndex extends React.Component {
               <div
                 style={{
                   alignItems: "center",
-                  border: "1px solid black",
+                  border: "1px solid white",
                   borderRadius: "4px",
                   display: "flex",
                   flexDirection: "column",
@@ -282,7 +281,8 @@ class BlogIndex extends React.Component {
               >
                 <h3
                   style={{
-                    fontSize: "40px",
+                    fontSize: "36px",
+                    lineHeight: "52px",
                     margin: "0",
                   }}
                 >
@@ -291,6 +291,127 @@ class BlogIndex extends React.Component {
                   Performance
                 </h3>
               </div>
+            </div>
+          </div>
+
+          <div
+            style={{
+              alignItems: "center",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              padding: "120px 0",
+              // minHeight: "100vh",
+              minWidth: "100vw",
+            }}
+          >
+            <h2
+              style={{
+                margin: "50px 0 0 0",
+                color: "#FFB347",
+                textAlign: "center",
+                fontSize: "36px",
+              }}
+            >
+              Últimos posts
+            </h2>
+
+            <div
+              style={{
+                display: "flex",
+                fontSize: "18px",
+                justifyContent: "space-between",
+                textAlign: "center",
+                margin: "60px 0 0 0",
+                width: "1200px",
+              }}
+            >
+              <a
+                href="#"
+                style={{
+                  border: "1px solid black",
+                  borderRadius: "4px",
+                  display: "inline-block",
+                  height: "300px",
+                  position: "relative",
+                  width: "32%",
+                }}
+              >
+                <img
+                  src="https://www.blendit.com/wp-content/uploads/2018/08/low-code-o-que-e.jpg"
+                  alt=""
+                  style={{ objectFit: "cover", width: "100%", height: "300px" }}
+                />
+                <h2
+                  style={{
+                    position: "absolute",
+                    fontSize: "24px",
+                    bottom: "0",
+                    left: "20px",
+                    color: "white",
+                  }}
+                >
+                  como testar o teste
+                </h2>
+              </a>
+
+              <a
+                href="#"
+                style={{
+                  border: "1px solid black",
+                  borderRadius: "4px",
+                  display: "inline-block",
+                  height: "300px",
+                  position: "relative",
+                  width: "32%",
+                }}
+              >
+                <img
+                  src="https://www.blendit.com/wp-content/uploads/2018/08/low-code-o-que-e.jpg"
+                  alt=""
+                  style={{ objectFit: "cover", width: "100%", height: "300px" }}
+                />
+                <h2
+                  style={{
+                    position: "absolute",
+                    fontSize: "24px",
+                    bottom: "0",
+                    left: "20px",
+                    color: "white",
+                  }}
+                >
+                  como testar o teste
+                </h2>
+              </a>
+
+              <a
+                href="#"
+                style={{
+                  border: "1px solid black",
+                  borderRadius: "4px",
+                  display: "inline-block",
+                  height: "300px",
+                  position: "relative",
+                  width: "32%",
+                }}
+              >
+                <img
+                  src="https://www.blendit.com/wp-content/uploads/2018/08/low-code-o-que-e.jpg"
+                  alt=""
+                  style={{ objectFit: "cover", width: "100%", height: "300px" }}
+                />
+                <h2
+                  style={{
+                    position: "absolute",
+                    fontSize: "24px",
+                    bottom: "0",
+                    left: "20px",
+                    color: "white",
+                  }}
+                >
+                  como testar o teste
+                </h2>
+              </a>
             </div>
           </div>
         </section>
