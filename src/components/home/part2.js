@@ -44,9 +44,14 @@ const Part2 = () => {
           E sobre a parte profissional, eu trabalho com frontend desde 2013, já
           passei por algumas empresas com modelos e stacks diferentes e essas
           experiências hoje me ajudam a pensar em soluções/maneiras diferentes
-          de resolver problemas. O que mais gosto de fazer é mexer com JS e
-          refatorar/otimizar soluções. No próximo bloco você consegue ver com
-          mais detalhes quais tecnologias eu tenho experiência.
+          de resolver problemas. Já trabalhei em projetos de hotsites, blogs,
+          revistas digitais, redes sociais, empréstimos, finanças pessoais e
+          projetos white-label.
+        </p>
+        <p>
+          O que mais gosto de fazer é mexer com JS e refatorar/otimizar
+          soluções. No próximo bloco você consegue ver com mais detalhes quais
+          tecnologias eu tenho experiência.
         </p>
       </div>
     </div>
