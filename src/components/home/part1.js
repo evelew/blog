@@ -1,17 +1,11 @@
 import React from "react"
 
+import "./part1.scss"
+
 const Part1 = () => {
   return (
     <div
-      style={{
-        alignItems: "center",
-        backgroundColor: "black",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        minHeight: "100vh",
-        minWidth: "100vw",
-      }}
+      className="block"
     >
       <h1
         style={{
