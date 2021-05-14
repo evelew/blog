@@ -57,6 +57,8 @@ const Knowledge = () => {
             Responsividade
             <br />
             Performance
+            <br />
+            SEO
           </h3>
         </div>
       </div>
