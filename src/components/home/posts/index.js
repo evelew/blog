@@ -5,7 +5,7 @@ import "./styles.scss"
 const Posts = ({ posts }) => {
   return (
     <div className="posts">
-      <h2>Últimos posts</h2>
+      <h2>Posts mais recentes</h2>
 
       <div className="posts__list">
         {posts.map(({ node: { fields: { slug }, frontmatter: { title } } }) => (

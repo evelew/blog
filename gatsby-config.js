@@ -76,5 +76,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Nanum Pen Script`],
+        display: "swap",
+      },
+    },
   ],
 }

@@ -6,10 +6,12 @@
   padding: 120px 0;
 
   h2 {
-    margin: 50px 0 0 0;
     color: #ffb347;
+    font-family: "Nanum Pen Script", Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    font-weight: normal;
+    margin: 50px 0 0 0;
     text-align: center;
-    font-size: 36px;
   }
 
   .posts__list {
@@ -36,11 +38,14 @@
     }
 
     h3 {
-      position: absolute;
-      font-size: 22px;
-      bottom: 0;
-      left: 20px;
       color: white;
+      bottom: 20px;
+      font-size: 22px;
+      left: 0;
+      margin: 0;
+      min-height: 50px;
+      padding: 0 20px;
+      position: absolute;
       text-align: left;
     }
   }
