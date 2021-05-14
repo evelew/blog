@@ -4,7 +4,6 @@
   flex-direction: column;
   justify-content: center;
   padding: 120px 0;
-  min-width: 100vw;
 
   h2 {
     margin: 50px 0 0 0;
@@ -38,10 +37,11 @@
 
     h3 {
       position: absolute;
-      font-size: 24px;
+      font-size: 22px;
       bottom: 0;
       left: 20px;
       color: white;
+      text-align: left;
     }
   }
 }
