@@ -1,10 +1,10 @@
 import React from "react"
 
 import SEO from "../components/seo"
-import Part1 from "../components/home/part1"
-import Part2 from "../components/home/part2"
-import Part3 from "../components/home/part3"
-import Part4 from "../components/home/part4"
+import TopBlock from "../components/home/topBlock"
+import About from "../components/home/about"
+import Knowledge from "../components/home/knowledge"
+import Posts from "../components/home/posts"
 
 class BlogIndex extends React.Component {
   render() {
@@ -18,10 +18,10 @@ class BlogIndex extends React.Component {
             minWidth: "100vw",
           }}
         >
-          <Part1 />
-          <Part2 />
-          <Part3 />
-          <Part4 />
+          <TopBlock />
+          <About />
+          <Knowledge />
+          <Posts />
         </section>
       </>
     )

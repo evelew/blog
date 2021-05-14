@@ -1,36 +1,13 @@
 import React from "react"
 
-const Part2 = () => {
-  return (
-    <div
-      style={{
-        alignItems: "center",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        minHeight: "100vh",
-        minWidth: "100vw",
-      }}
-    >
-      <h2
-        style={{
-          margin: "50px 0 0 0",
-          color: "#FFB347",
-          textAlign: "center",
-          fontSize: "36px",
-        }}
-      >
-        Quem é ela
-      </h2>
+import "./styles.scss"
 
-      <div
-        style={{
-          fontSize: "18px",
-          textAlign: "center",
-          margin: "60px 0 0 0",
-          width: "1200px",
-        }}
-      >
+const About = () => {
+  return (
+    <div className="about">
+      <h2>Quem é ela</h2>
+
+      <div className="text">
         <p>
           Eu sou a Evellyn, tenho 25 anos, sou de Curitiba mas agora tô morando
           em São Paulo. Gosto muito de ouvir música em qualquer momento do dia,
@@ -58,4 +35,4 @@ const Part2 = () => {
   )
 }
 
-export default Part2
+export default About
