@@ -71,6 +71,10 @@ function SEO({ description, lang, keywords, title }) {
           name: "keywords",
           content: keywords,
         },
+        {
+          name: "google-site-verification",
+          content: "ZwuUmbl7jMUEp4BxoJCFvhCsnGwKTw5VTZPvdlFB3-s",
+        },
       ]}
     />
   )
