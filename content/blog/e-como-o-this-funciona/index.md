@@ -1,6 +1,6 @@
 ---
 title: E como o this funciona?
-description: Uma tentativa de explicar o básico do funcionamento do this do js
+description: Esse post é uma tentativa de explicar o básico do funcionamento do this do js
 date: "2021-05-17T00:00:00.121Z"
 ---
 
