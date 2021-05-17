@@ -18,6 +18,10 @@
     font-size: 20px;
     text-align: center;
     margin: 60px 0 0 0;
-    width: 1200px;
+
+    @media (min-width(1024px)) {
+      color: red;
+      width: 1200px;
+    }
   }
 }
