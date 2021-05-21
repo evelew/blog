@@ -1,5 +1,5 @@
 ---
-title: Definindo uma cobertura de testes mínima no Jest com a propriedade coverageThreshold
+title: Definindo uma cobertura mínima de testes no Jest com a propriedade coverageThreshold
 description: Como facilitar a vida com uma configuração muito simples
 date: "2021-05-20T00:00:00.121Z"
 ---
