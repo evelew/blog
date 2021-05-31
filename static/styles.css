@@ -167,7 +167,7 @@ pre[data-line] .line-highlight[data-end]:after {
   bottom: 0.4em;
 }
 
-ol {
+ol, ul {
   padding-left: 30px;
 }
 
