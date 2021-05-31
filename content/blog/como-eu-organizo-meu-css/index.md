@@ -1,6 +1,6 @@
 ---
 title: Como eu organizo meu CSS
-description: A ideia nesse post é compartilhar como eu costumo organizar arquivos de estilo.
+description: A ideia nesse post é compartilhar como eu costumo organizar arquivos de estilo
 date: "2021-05-31T00:00:00.121Z"
 ---
 
