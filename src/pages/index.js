@@ -1,73 +1,47 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import TopBlock from "../components/home/topBlock"
+import About from "../components/home/about"
+// import Knowledge from "../components/home/knowledge"
+import Posts from "../components/home/posts"
 
-class BlogIndex extends React.Component {
-  render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
+const BlogIndex = ({ data }) => {
+  const posts = data.allMarkdownRemark.edges
+  return (
+    <>
+      <SEO title="Home" />
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="Home" />
-        <Bio />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <article key={node.fields.slug}>
-              <header>
-                <h2
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                    fontSize: "22px",
-                  }}
-                >
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </h2>
-                <small>{node.frontmatter.date}</small>
-              </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </section>
-            </article>
-          )
-        })}
-      </Layout>
-    )
-  }
+      <section
+        style={{
+          minHeight: "100vh",
+        }}
+      >
+        <TopBlock />
+        <About />
+        {/* <Knowledge /> */}
+        <Posts posts={posts} />
+      </section>
+    </>
+  )
 }
 
 export default BlogIndex
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 3
+    ) {
       edges {
         node {
-          excerpt
           fields {
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
-            description
           }
         }
       }

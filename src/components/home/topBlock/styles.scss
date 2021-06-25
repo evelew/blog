@@ -1,23 +1,36 @@
 .top-block {
-  align-items: center;
   background-color: black;
+
+  .header {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1500px;
+    width: 100%;
+
+    a {
+      box-shadow: none;
+      color: white;
+      font-family: "Nanum Pen Script", Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      position: absolute;
+      right: 0;
+      top: 50px;
+
+      @media (min-width: 1024px) {
+        font-size: 35px;
+      }
+    }
+  }
+}
+
+.top-block__text {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
   opacity: 1;
   transition: opacity 0.3s ease-out;
-
-  &.top-block--loading {
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-
-  &.fade-out {
-    opacity: 0;
-  }
 
   h1 {
     color: white;
