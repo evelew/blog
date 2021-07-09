@@ -2,6 +2,9 @@
 title: Como rodar scripts paralelamente
 description: A vida é curta demais pra ter um pre-commit demorado²
 date: "2021-06-21T00:00:00.121Z"
+cover_image: https://images.unsplash.com/photo-1534185372994-55f9e64235c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80
+credit_image: Foto tirada por Adi Goldstein
+credit_image_author: https://unsplash.com/@adigold1
 ---
 
 Quando configuramos alguns scripts pra rodarem no pre-commit/pre-push nosso tempo de desenvolvimento pode acabar sendo afetado pela demora pra executar essas tarefas, mas a gente consegue também diminuir esse tempo de espera rodando tarefas em paralelo.

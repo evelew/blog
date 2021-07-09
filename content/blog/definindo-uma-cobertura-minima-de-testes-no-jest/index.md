@@ -2,6 +2,9 @@
 title: Definindo uma cobertura mínima de testes no Jest com a propriedade coverageThreshold
 description: Como facilitar a vida com uma configuração muito simples
 date: "2021-05-20T00:00:00.121Z"
+cover_image: https://images.unsplash.com/photo-1558763861-5ae1a46775d7
+credit_image:
+credit_image_author:
 ---
 
 Imagine que você que cobriu o seu fluxo mais importante com testes, sua cobertura ta em 85% e você ta feliz da vida, algum tempo depois esse fluxo sofre algumas mudanças, a cobertura de testes cai e ninguém repara. Como esse é o fluxo mais importante da sua aplicação é importante que ele tenha uma cobertura mínima de testes, e com essas mudanças a cobertura acaba ficando longe de ser boa...

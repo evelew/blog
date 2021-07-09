@@ -2,6 +2,9 @@
 title: Como eu organizo meu CSS
 description: A ideia nesse post é compartilhar como eu costumo organizar arquivos de estilo
 date: "2021-05-31T00:00:00.121Z"
+cover_image: https://images.unsplash.com/photo-1577996980983-928bf4612005?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=100
+credit_image: Foto tirada por Rad Pozniakov
+credit_image_author: https://unsplash.com/@radpozniakov
 ---
 
 Esses dias me perguntaram como eu organizo meus arquivos de CSS e eu achei que seria legal postar aqui. Num primeiro momento eu achei que esse seria um post meio chato de fazer mas no final esse foi um dos textos que mais gostei de escrever.
@@ -92,17 +95,23 @@ Essa estrutura HTML tem uma ordem:
 Então o meu CSS reflete essa ordem:
 
 ```css
-.blog {}
+.blog {
+}
 
-.blog-title {}
+.blog-title {
+}
 
-.card {}
+.card {
+}
 
-.card-image {}
+.card-image {
+}
 
-.card-title {}
+.card-title {
+}
 
-.card-introduction {}
+.card-introduction {
+}
 ```
 
 Isso facilita bastante na hora de encontrar um seletor, se eu preciso alterar o título do card, eu consigo ter uma noção de onde +- ele vai estar quando vou "andando" pelo arquivo.
@@ -139,19 +148,26 @@ AÍ é só você continuar seguindo a mesma regra, olha só:
 E então o CSS fica assim:
 
 ```css
-.blog {}
+.blog {
+}
 
-.blog-title {}
+.blog-title {
+}
 
-.card {}
+.card {
+}
 
-.card-image {}
+.card-image {
+}
 
-.card-tag {} // NOVO SELETOR
+.card-tag {
+} // NOVO SELETOR
 
-.card-title {}
+.card-title {
+}
 
-.card-introduction {}
+.card-introduction {
+}
 ```
 
 # Nomes de classes
@@ -159,19 +175,24 @@ E então o CSS fica assim:
 Esse é um assunto complicado, eu não tenho nenhuma preferência muito forte ainda, no exemplo acima eu nomeei os elementos filhos com um - (traço), mas nos meus projetos pessoais eu costumo criar as classes assim:
 
 ```css
-.blog {}
+.blog {
+}
 
-.blog__title {}
+.blog__title {
+}
 
-.card {}
+.card {
+}
 
-.card__image {}
+.card__image {
+}
 ```
 
 E assim por diante, quando uma classe define o status do elemento ela fica assim:
 
 ```css
-.card—-error {}
+.card—-error {
+}
 ```
 
 Eu não gosto muito desse estilo com underscore/underline `__` pq as classes ficam grandes muito rápido.

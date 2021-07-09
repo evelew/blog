@@ -79,7 +79,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Nanum Pen Script`],
+        fonts: [`Nanum Pen Script`, `Roboto`],
         display: "swap",
       },
     },
