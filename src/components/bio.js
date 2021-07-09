@@ -41,29 +41,33 @@ const Bio = () => {
         marginBottom: rhythm(2.5),
       }}
     >
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author}
+      <a
+        href="/"
         style={{
-          marginRight: rhythm(1 / 2),
-          marginBottom: 0,
-          minWidth: 50,
-          borderRadius: `100%`,
+          boxShadow: "none",
         }}
-        imgStyle={{
-          borderRadius: `50%`,
-        }}
-      />
+      >
+        <Image
+          fixed={data.avatar.childImageSharp.fixed}
+          alt={author}
+          style={{
+            marginRight: rhythm(1 / 2),
+            marginBottom: 0,
+            minWidth: 50,
+            borderRadius: `100%`,
+          }}
+          imgStyle={{
+            borderRadius: `50%`,
+          }}
+        />
+      </a>
       <p>
-        Eu sou a <strong>{author}</strong>, desenvolvedora web [por acaso] desde 2013 e a favor de JS sem ponto e vírgula.
+        Eu sou a <strong>{author}</strong>, desenvolvedora web [por acaso] desde
+        2013 e a favor de JS sem ponto e vírgula.
         <br />
-        <a href={`https://twitter.com/${social.twitter}`}>
-          Twitter
-        </a>
+        <a href={`https://twitter.com/${social.twitter}`}>Twitter</a>
         {` `}
-        <a href={`https://linkedin.com/in/${social.linkedin}`}>
-          LinkedIn
-        </a>
+        <a href={`https://linkedin.com/in/${social.linkedin}`}>LinkedIn</a>
       </p>
     </div>
   )
