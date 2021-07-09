@@ -9,7 +9,11 @@ const TopBlock = () => {
         <a href="./blog">Blog</a>
       </header>
       <div className="top-block__text">
-        <h1>Evellyn Lima</h1>
+        <h1>
+          <a href="https://www.linkedin.com/in/evellyn-lima/" target="_blank">
+            Evellyn Lima
+          </a>
+        </h1>
         <h2>Frontend Developer</h2>
       </div>
     </section>

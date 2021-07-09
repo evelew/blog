@@ -1,5 +1,5 @@
 ---
-title: Primeira letra em maiúsculo com CSS
+title: CSS ::first-letter
 description: Substituindo o método toUpperCase por um pseudo-elemento do CSS
 date: "2021-06-28T00:00:00.121Z"
 cover_image: https://images.unsplash.com/photo-1468404166635-56e2d75ee491?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80

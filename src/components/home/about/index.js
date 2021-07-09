@@ -15,7 +15,7 @@ const About = () => {
         <p>
           Eu trabalho com frontend desde 2014, já passei por algumas empresas
           com modelos e stacks diferentes e essas experiências hoje me ajudam a
-          pensar em soluções/maneiras diferentes para resolver problemas.
+          pensar em soluções diferentes para resolver problemas.
         </p>
         <p>
           Já trabalhei em projetos de hotsites, blogs, revistas digitais, redes
