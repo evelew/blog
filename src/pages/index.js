@@ -42,6 +42,9 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            cover_image
+            credit_image
+            credit_image_author
           }
         }
       }
