@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: `https://evellynlima.com.br/`,
     social: {
       twitter: `eveleww`,
-      linkedin: `evellyn-lima-88638379`,
+      linkedin: `evellyn-lima`,
     },
   },
   plugins: [
@@ -73,6 +73,14 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Nanum Pen Script`, `Roboto Mono`],
+        display: "swap",
       },
     },
   ],

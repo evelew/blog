@@ -1,0 +1,51 @@
+.knowledge {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 100px 0;
+
+  h2 {
+    color: #f73c07;
+    font-family: "Nanum Pen Script", Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+  }
+
+  .knowledge__wrapper {
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 18px;
+    text-align: center;
+    margin: 60px 0 0 0;
+    width: 1200px;
+  }
+
+  .knowledge__block {
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    width: 32%;
+
+    &:nth-child(n + 4) {
+      margin-top: 40px;
+    }
+
+    h3 {
+      font-size: 36px;
+      line-height: 52px;
+      margin: 0;
+    }
+  }
+}
