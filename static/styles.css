@@ -1,168 +1,181 @@
 code[class*="language-"],
 pre[class*="language-"] {
-	-moz-tab-size: 2;
-	-o-tab-size: 2;
-	tab-size: 2;
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
-	white-space: pre;
-	white-space: pre-wrap;
-	word-wrap: normal;
-	font-family: monospace;
-	font-size: 15px;
-	color: white;
-	/* color: #50fa7b; */
-	text-shadow: none;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: normal;
+  font-family: monospace;
+  font-size: 16px;
+  color: white;
+  /* color: #50fa7b; */
+  text-shadow: none;
 }
 
 pre > code[class*="language-"] {
-	font-size: 1em;
+  font-size: 1em;
 }
 
 pre[class*="language-"],
-:not(pre)>code[class*="language-"] {
-	background: #282a36;
+:not(pre) > code[class*="language-"] {
+  background: #282a36;
 }
 
 pre[class*="language-"] {
-	padding: 15px;
-	border-radius: 4px;
-	border: 1px solid #e1e1e8;
-	overflow: auto;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #e1e1e8;
+  overflow: auto;
 }
 
 pre[class*="language-"] {
-	position: relative;
+  position: relative;
 }
 pre[class*="language-"] code {
-	white-space: pre;
-	display: block;
+  white-space: pre;
+  display: block;
 }
 
-:not(pre)>code[class*="language-"] {
-	border-radius: .3em;
-	font-size: 14px;
-	padding: 0.15em 0.3em 0.05em;
+:not(pre) > code[class*="language-"] {
+  border-radius: 0.3em;
+  font-size: 14px;
+  padding: 0.15em 0.3em 0.05em;
 }
 .token.namespace {
-	opacity: .7;
+  opacity: 0.7;
 }
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: #6272a4;
+  color: #6272a4;
 }
 .token.operator,
 .token.boolean,
 .token.number {
-	color: white;
+  color: white;
 }
 .token.attr-name,
 .token.string {
-	color: #f1fa8c;
+  color: #f1fa8c;
 }
 .token.entity,
 .token.url,
 .language-css .token.string,
 .style .token.string {
-	color: #e6d06c;
+  color: #e6d06c;
 }
 .token.selector,
 .token.inserted {
-	color: #a6e22d;
+  color: #a6e22d;
 }
 .token.atrule,
 .token.attr-value,
 .token.keyword,
 .token.important,
 .token.deleted {
-	color: #ff79c6	;
+  color: #ff79c6;
 }
 .token.regex {
-	color: 	#f1fa8c;
+  color: #f1fa8c;
 }
 .token.statement {
-	color: 	#8be9fd;
+  color: #8be9fd;
 }
 .token.placeholder,
 .token.variable {
-	color: #fff;
+  color: #fff;
 }
 .token.important,
 .token.statement,
 .token.bold {
-	font-weight: bold;
+  font-weight: bold;
 }
 .token.punctuation,
 .token.function {
-	color: #50fa7b;
+  color: #50fa7b;
 }
 .token.entity {
-	cursor: help;
+  cursor: help;
 }
 .token.italic {
-	font-style: italic;
+  font-style: italic;
 }
 
 code.language-markup {
-	color: #f9f9f9;
+  color: #f9f9f9;
 }
 code.language-markup .token.tag {
-	color: #ef3b7d;
+  color: #ef3b7d;
 }
 code.language-markup .token.attr-name {
-	color: #a6e22d;
+  color: #a6e22d;
 }
 code.language-markup .token.attr-value {
-	color: #e6d06c;
+  color: #e6d06c;
 }
 code.language-markup .token.style,
 code.language-markup .token.script {
-	color: #50fa7b;
+  color: #50fa7b;
 }
 code.language-markup .token.script .token.keyword {
-	color: #50fa7b;
+  color: #50fa7b;
 }
 
 /* Line highlight plugin */
 pre[class*="language-"][data-line] {
-	position: relative;
-	padding: 1em 0 1em 3em;
+  position: relative;
+  padding: 1em 0 1em 3em;
 }
 pre[data-line] .line-highlight {
-	position: absolute;
-	left: 0;
-	right: 0;
-	padding: 0;
-	margin-top: 1em;
-	background: rgba(255, 255, 255, 0.08);
-	pointer-events: none;
-	line-height: inherit;
-	white-space: pre;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin-top: 1em;
+  background: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
 }
 pre[data-line] .line-highlight:before,
 pre[data-line] .line-highlight[data-end]:after {
-	content: attr(data-start);
-	position: absolute;
-	top: .4em;
-	left: .6em;
-	min-width: 1em;
-	padding: 0.2em 0.5em;
-	background-color: rgba(255, 255, 255, 0.4);
-	color: black;
-	font: bold 65%/1 sans-serif;
-	height: 1em;
-	line-height: 1em;
-	text-align: center;
-	border-radius: 999px;
-	text-shadow: none;
-	box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+  content: attr(data-start);
+  position: absolute;
+  top: 0.4em;
+  left: 0.6em;
+  min-width: 1em;
+  padding: 0.2em 0.5em;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: black;
+  font: bold 65%/1 sans-serif;
+  height: 1em;
+  line-height: 1em;
+  text-align: center;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
 }
 pre[data-line] .line-highlight[data-end]:after {
-	content: attr(data-end);
-	top: auto;
-	bottom: .4em;
+  content: attr(data-end);
+  top: auto;
+  bottom: 0.4em;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+ol li::marker {
+  color: #ff79c6;
+  font-weight: bold;
+}
+
+main {
+  font-size: 18px;
 }
