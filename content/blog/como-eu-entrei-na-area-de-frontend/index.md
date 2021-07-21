@@ -1,6 +1,6 @@
 ---
 title: Como eu entrei na área de frontend
-description: Decidi escrever sobre como acabei trabalhando com frontend!
+description: Nesse texto eu conto como eu virei uma desenvolvedora frontend por acaso
 date: "2021-07-21T00:00:00.121Z"
 cover_image: https://images.unsplash.com/photo-1577996980983-928bf4612005?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=100
 credit_image: Foto tirada por Rad Pozniakov
