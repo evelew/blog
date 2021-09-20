@@ -63,7 +63,7 @@ const Bio = () => {
       </a>
       <p>
         Eu sou a <strong>{author}</strong>, desenvolvedora web [por acaso] desde
-        2013 e a favor de JS sem ponto e vírgula.
+        2014 e a favor de JS sem ponto e vírgula.
         <br />
         <a href={`https://twitter.com/${social.twitter}`}>Twitter</a>
         {` `}

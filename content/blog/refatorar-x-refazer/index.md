@@ -2,6 +2,10 @@
 title: "Refatorar X Refazer: O que considerar antes de tomar essa decisão"
 description: Nesse post eu compartilho como costumo pensar antes de escolher uma das opções
 date: "2021-08-27T23:00:00.121Z"
+cover_image: https://images.unsplash.com/photo-1589652717406-1c69efaf1ff8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80
+credit_image: Foto tirada por Cookie the Pom
+
+credit_image_author: https://unsplash.com/@cookiethepom
 ---
 
 Se você já entrou em um projeto desatualizado, com arquitetura e código confusos, provavelmente você já se perguntou:

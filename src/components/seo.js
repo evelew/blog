@@ -84,7 +84,7 @@ SEO.defaultProps = {
   lang: "pt-br",
   keywords: ["frontend", "front", "javascript", "html", "css", "web", "dev"],
   description:
-    "Desenvolvedora web [por acaso] desde 2013 e a favor de JS sem ponto e vírgula.",
+    "Desenvolvedora web [por acaso] desde 2014 e a favor de JS sem ponto e vírgula.",
 }
 
 SEO.propTypes = {

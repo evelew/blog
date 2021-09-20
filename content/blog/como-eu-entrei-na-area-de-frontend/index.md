@@ -33,7 +33,7 @@ Bom, a minha ideia era ir pro lado de design porém tinha um problema... tudo qu
 
 Resolvi procurar no meu email e eu posso provar:
 
-![Trabalho da faculdade feito em 2013](./images/trabalho-faculdade-2013.png)
+![Trabalho da faculdade feito em 2014](./images/trabalho-faculdade-2014.png)
 
 <center><sub>Péssimo. Não tinha futuro. (inclusive hoje acho essa piada horrorosa)</sub></center>
 <br />
