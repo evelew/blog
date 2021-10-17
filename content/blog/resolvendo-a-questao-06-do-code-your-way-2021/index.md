@@ -7,6 +7,10 @@ credit_image: Foto tirada por Zach Lucero
 credit_image_author: https://unsplash.com/@zlucerophoto
 ---
 
+**Update:** Fiquei entre os 500 primeiros 🎉🎉🎉
+
+---
+
 Faz uns 4 anos que participo do Code Your Way do Ebanx, a ideia do evento é resolver alguns desafios técnicos pelo HackerRank dentro de um tempo pré-determinado - nesse ano eram 6 desafios para serem resolvidos em 1h30. As pessoas que ficarem entre os 500 primeiros no ranking final ganham uma camiseta exclusiva do evento.
 
 Eu gosto de fazer esses desafios porque normalmente os problemas são bem diferentes dos que vejo no dia a dia, então é uma boa oportunidade pra fazer coisas diferentes e descobrir novas técnicas, esse é um jeito divertido de evoluir tecnicamente.
