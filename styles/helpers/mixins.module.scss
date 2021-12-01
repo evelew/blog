@@ -1,0 +1,14 @@
+@mixin container {
+  padding: 0 16px;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+@mixin highlightedFont {
+  font-family: "Gochi Hand", Arial, Helvetica, sans-serif;
+}
+
+@mixin generalFont {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}

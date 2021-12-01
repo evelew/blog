@@ -1,0 +1,18 @@
+.main {
+  @include container();
+  min-height: 100vh;
+}
+
+.title {
+  @include highlightedFont();
+  color: $primary-color;
+
+  @include aboveSmall() {
+    background-color: red;
+  }
+}
+
+.subtitle {
+  color: $primary-color;
+  font-weight: normal;
+}
