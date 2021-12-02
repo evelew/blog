@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 import s from "../styles/Home.module.scss";
 
@@ -44,7 +45,7 @@ export default function Home() {
     },
   ];
   return (
-    <div className={s.container}>
+    <>
       <Head>
         <title>E. Lima - Frontend Developer</title>
         <meta name="description" content="Evellyn Lima - Frontend Developer" />
@@ -97,7 +98,15 @@ export default function Home() {
         </section>
 
         <section className={s.posts}>
-          <h2 className={s.title}>posts mais recentes</h2>
+          <div className={s.top}>
+            <h2 className={s.title}>posts mais recentes</h2>
+
+            <Link href="/blog">
+              <a className={s.button}>
+                <span>ver todos</span>
+              </a>
+            </Link>
+          </div>
 
           <ul className={s.list}>
             {posts.map((post, i) => (
@@ -115,6 +124,6 @@ export default function Home() {
           </ul>
         </section>
       </main>
-    </div>
+    </>
   );
 }

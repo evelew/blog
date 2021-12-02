@@ -13,6 +13,7 @@
     @include highlightedFont();
     color: $primary-color;
     font-size: 46px;
+    font-weight: normal;
 
     @include aboveMedium() {
       font-size: 52px;
@@ -31,7 +32,7 @@
 
     @include aboveLarge() {
       font-size: 42px;
-      margin-top: 28px;
+      margin-top: 12px;
     }
   }
 }
@@ -66,8 +67,14 @@
     }
 
     p {
+      font-size: 14px;
+
       &:not(:first-of-type) {
         margin: 12px 0;
+      }
+
+      @include aboveLarge() {
+        font-size: 16px;
       }
     }
   }
@@ -147,15 +154,45 @@
     padding-top: 136px;
   }
 
-  .title {
-    @include title();
+  .top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
 
-    @include aboveSmall() {
-      text-align: center;
+    .title {
+      @include title();
+
+      @include aboveSmall() {
+        text-align: center;
+      }
+
+      @include aboveLarge() {
+        text-align: left;
+      }
     }
 
-    @include aboveLarge() {
-      text-align: left;
+    .button {
+      background-color: $primary-color-opacity;
+      border-radius: 4px;
+      position: relative;
+
+      &:hover {
+        span {
+          transform: translate3d(-8px, -8px, 0);
+        }
+      }
+
+      span {
+        background-color: $primary-color;
+        border-radius: 4px;
+        color: white;
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 12px;
+        transform: translate3d(-4px, -4px, 0);
+        transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+      }
     }
   }
 
@@ -184,6 +221,7 @@
       }
 
       @include aboveLarge() {
+        margin: 0;
         max-width: 31%;
 
         &:not(:first-of-type) {
