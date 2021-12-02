@@ -1,18 +1,231 @@
-.main {
+.hero {
   @include container();
-  min-height: 100vh;
-}
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  min-height: 60vh;
 
-.title {
-  @include highlightedFont();
-  color: $primary-color;
+  @include aboveLarge() {
+    min-height: 100vh;
+  }
 
-  @include aboveSmall() {
-    background-color: red;
+  .title {
+    @include highlightedFont();
+    color: $primary-color;
+    font-size: 46px;
+
+    @include aboveMedium() {
+      font-size: 52px;
+    }
+
+    @include aboveLarge() {
+      font-size: 120px;
+    }
+  }
+
+  .subtitle {
+    color: $primary-color;
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 12px;
+
+    @include aboveLarge() {
+      font-size: 42px;
+      margin-top: 28px;
+    }
   }
 }
 
-.subtitle {
-  color: $primary-color;
-  font-weight: normal;
+.about {
+  @include container();
+  font-size: 14px;
+  line-height: 22px;
+  padding-bottom: 40px;
+  padding-top: 20px;
+
+  @include aboveLarge() {
+    display: flex;
+    padding-bottom: 120px;
+    padding-top: 40px;
+  }
+
+  .title {
+    @include title();
+    flex: 1;
+  }
+
+  .text {
+    margin-top: 12px;
+
+    @include aboveLarge() {
+      margin-top: 0;
+    }
+
+    @include aboveLarge() {
+      width: 736px;
+    }
+
+    p {
+      &:not(:first-of-type) {
+        margin: 12px 0;
+      }
+    }
+  }
+}
+
+.interests {
+  background-color: $secondary-color-opacity;
+  padding: 40px 0;
+
+  @include aboveLarge() {
+    padding: 70px 0;
+  }
+
+  .wrapper {
+    @include container();
+  }
+
+  .title {
+    @include title();
+    text-align: center;
+  }
+
+  .list {
+    list-style: none;
+    margin: 40px auto 0 auto;
+
+    @include aboveLarge() {
+      display: flex;
+      justify-content: space-between;
+      margin: 70px auto 0 auto;
+      max-width: 736px;
+    }
+
+    li {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+
+      &:not(:first-of-type) {
+        margin: 32px 0 0 0;
+      }
+
+      @include aboveLarge() {
+        max-width: 160px;
+
+        &:not(:first-of-type) {
+          margin: 0;
+        }
+      }
+
+      .image {
+        background-color: #c4c4c4;
+        height: 72px;
+        margin-bottom: 8px;
+        width: 72px;
+
+        @include aboveLarge() {
+          margin-bottom: 14px;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.posts {
+  @include container();
+  padding-bottom: 60px;
+  padding-top: 40px;
+
+  @include aboveLarge() {
+    padding-bottom: 192px;
+    padding-top: 136px;
+  }
+
+  .title {
+    @include title();
+
+    @include aboveSmall() {
+      text-align: center;
+    }
+
+    @include aboveLarge() {
+      text-align: left;
+    }
+  }
+
+  .list {
+    list-style: none;
+    margin-top: 32px;
+
+    @include aboveLarge() {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 48px;
+    }
+
+    .post {
+      border: 1px solid #dcdcdc;
+      border-radius: 4px;
+
+      &:not(:first-of-type) {
+        margin-top: 24px;
+      }
+
+      @include aboveSmall() {
+        margin: 0 auto;
+        max-width: 352px;
+        width: 100%;
+      }
+
+      @include aboveLarge() {
+        max-width: 31%;
+
+        &:not(:first-of-type) {
+          margin-top: 0;
+        }
+      }
+
+      .image {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 153px;
+        overflow: hidden;
+
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+
+      .text-wrapper {
+        padding: 16px 24px 24px 24px;
+
+        .date {
+          color: #7c7c7c;
+          font-size: 12px;
+        }
+
+        .title {
+          color: $title-color;
+          font-size: 18px;
+          margin-top: 8px;
+        }
+
+        .description {
+          color: $title-color;
+          font-size: 14px;
+          font-weight: normal;
+          line-height: 19px;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
 }

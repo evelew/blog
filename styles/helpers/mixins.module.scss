@@ -12,3 +12,13 @@
 @mixin generalFont {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
+
+@mixin title {
+  color: $title-color;
+  font-size: 22px;
+  font-weight: bold;
+
+  @include aboveLarge() {
+    font-size: 32px;
+  }
+}
