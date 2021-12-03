@@ -1,0 +1,126 @@
+.top {
+  @include container();
+  margin-top: 40px;
+
+  @include aboveLarge() {
+    margin-top: 72px;
+  }
+
+  p {
+    color: $title-color;
+    font-size: 16px;
+
+    @include aboveLarge() {
+      font-size: 20px;
+    }
+  }
+
+  .links {
+    display: flex;
+    margin-top: 4px;
+
+    a {
+      color: $title-color;
+      font-weight: bold;
+      text-decoration: underline;
+
+      &:not(:first-of-type) {
+        margin-left: 6px;
+      }
+    }
+  }
+}
+
+.posts {
+  background-color: $secondary-color-opacity;
+  margin-top: 58px;
+
+  .wrapper-posts {
+    @include container();
+    padding-bottom: 60px;
+    padding-top: 38px;
+
+    @include aboveLarge() {
+      padding-bottom: 156px;
+      padding-top: 68px;
+    }
+
+    .posts-title {
+      @include title();
+    }
+
+    .list {
+      list-style: none;
+      margin-top: 24px;
+
+      @include aboveLarge() {
+        margin-top: 38px;
+      }
+
+      .post {
+        background-color: white;
+        border-radius: 4px;
+        padding: 24px;
+
+        &:not(:first-of-type) {
+          margin-top: 20px;
+        }
+
+        @include aboveLarge() {
+          padding: 24px 52px 24px 24px;
+
+          &:not(:first-of-type) {
+            margin-top: 32px;
+          }
+
+          &:hover {
+            .arrow {
+              transform: translateX(5px);
+            }
+          }
+        }
+
+        .text-wrapper {
+          align-items: center;
+          display: flex;
+          justify-content: space-between;
+
+          .title {
+            @include title();
+            font-size: 18px;
+
+            @include aboveLarge() {
+              font-size: 24px;
+            }
+          }
+
+          .date {
+            color: $title-color;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 12px;
+          }
+
+          .description {
+            color: $title-color;
+            margin-top: 14px;
+          }
+        }
+
+        .arrow {
+          display: none;
+
+          @include aboveMedium() {
+            display: block;
+          }
+
+          @include aboveLarge() {
+            display: block;
+            transform: translateX(0px);
+            transition: transform 0.2s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
