@@ -1,0 +1,48 @@
+.hero {
+}
+
+.hero-image {
+  background-image: url("https://images.unsplash.com/photo-1474625121024-7595bfbc57ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1775&q=80");
+  background-position: center center;
+  min-height: 60vh;
+  position: relative;
+  width: 100%;
+
+  &:after {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 10%,
+      #ffffff 90%
+    );
+    bottom: 0;
+    content: "";
+    height: 60%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.body {
+  @include container();
+}
+
+.date {
+  color: $secondary-text-color;
+}
+
+.title {
+  color: $title-color;
+  margin-top: 16px;
+}
+
+.subtitle {
+  color: $secondary-text-color;
+  margin-top: 24px;
+}
+
+.text {
+  @include textFont();
+  font-size: 18px;
+  margin-top: 56px;
+}
