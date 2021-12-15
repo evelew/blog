@@ -1,10 +1,23 @@
-.hero {
+.hero-wrapper {
+  @include container();
+  position: relative;
+
+  .hero-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    top: 20px;
+    z-index: 10;
+  }
 }
 
 .hero-image {
-  background-image: url("https://images.unsplash.com/photo-1474625121024-7595bfbc57ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1775&q=80");
-  background-position: center center;
-  min-height: 60vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center calc(50% + 80px);
+  min-height: 80vh;
   position: relative;
   width: 100%;
 
@@ -25,6 +38,8 @@
 
 .body {
   @include container();
+  margin: 0 auto;
+  max-width: 800px;
 }
 
 .date {
@@ -34,10 +49,23 @@
 .title {
   color: $title-color;
   margin-top: 16px;
+
+  @include aboveMedium() {
+    font-size: 40px;
+  }
+
+  @include aboveLarge() {
+    font-size: 50px;
+  }
+
+  @include aboveXLarge() {
+    font-size: 64px;
+  }
 }
 
 .subtitle {
   color: $secondary-text-color;
+  font-weight: normal;
   margin-top: 24px;
 }
 
@@ -45,4 +73,37 @@
   @include textFont();
   font-size: 18px;
   margin-top: 56px;
+  padding-bottom: 80px;
+
+  p {
+    margin-top: 16px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 28px;
+  }
+
+  ul {
+    margin-top: 12px;
+    padding-left: 20px;
+
+    li {
+      margin: 12px 0;
+    }
+  }
+
+  a {
+    color: $primary-color;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  hr {
+    margin: 40px 0;
+  }
 }
