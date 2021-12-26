@@ -3,38 +3,12 @@ import Link from "next/link";
 
 import ArrowRight from "../public/images/arrow-right.svg";
 
+import { getAllPosts } from "./helpers/api";
+import getFormattedDate from "./helpers/getFormattedDate";
+
 import s from "../styles/Blog.module.scss";
 
-export default function Home() {
-  const posts = [
-    {
-      image:
-        "https://images.unsplash.com/photo-1638292596909-5174a9f6ec11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=352&q=80",
-      date: "September 27, 2021",
-      href: "/blog/post",
-      title: "Criando atalhos para os comandos do git",
-      description:
-        "A vida é curta demais pra ficar digitando comandos longos ⌨️",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1638292596909-5174a9f6ec11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=352&q=80",
-      date: "September 27, 2021",
-      href: "/blog/post",
-      title: "Criando atalhos para os comandos do git",
-      description:
-        "A vida é curta demais pra ficar digitando comandos longos ⌨️",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1638292596909-5174a9f6ec11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=352&q=80",
-      date: "September 27, 2021",
-      href: "/blog/post",
-      title: "Criando atalhos para os comandos do git",
-      description:
-        "A vida é curta demais pra ficar digitando comandos longos ⌨️",
-    },
-  ];
+export default function Home({ posts }) {
   return (
     <>
       <Head>
@@ -51,10 +25,18 @@ export default function Home() {
           </p>
 
           <div className={s.links}>
-            <a href="https://twitter.com/eveleww" target="_blank">
+            <a
+              href="https://twitter.com/eveleww"
+              target="_blank"
+              rel="noreferrer"
+            >
               twitter
             </a>
-            <a href="https://www.linkedin.com/in/evellyn-lima/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/evellyn-lima/"
+              target="_blank"
+              rel="noreferrer"
+            >
               linkedin
             </a>
           </div>
@@ -66,11 +48,13 @@ export default function Home() {
             <ul className={s.list}>
               {posts.map((post, i) => (
                 <li className={s.post} key={`posts-${i}`}>
-                  <Link href={post.href}>
+                  <Link href={`/post/${post.slug}`}>
                     <a className={s["text-wrapper"]}>
-                      <div>
+                      <div className={s["text-info"]}>
                         <h3 className={s.title}>{post.title}</h3>
-                        <small className={s.date}>{post.date}</small>
+                        <small className={s.date}>
+                          {getFormattedDate(post.date)}
+                        </small>
                         <p className={s.description}>{post.description}</p>
                       </div>
 
@@ -87,4 +71,12 @@ export default function Home() {
       </main>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const posts = getAllPosts(["title", "description", "date", "slug"]);
+
+  return {
+    props: { posts },
+  };
 }

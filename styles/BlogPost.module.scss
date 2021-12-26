@@ -1,12 +1,11 @@
 .hero-wrapper {
-  @include container();
   position: relative;
 
   .hero-button {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    left: 0;
+    left: 16px;
     position: absolute;
     top: 20px;
     z-index: 10;
@@ -16,10 +15,19 @@
 .hero-image {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center calc(50% + 80px);
-  min-height: 80vh;
+  background-position: center top;
+  min-height: 60vh;
   position: relative;
   width: 100%;
+
+  @include aboveLarge() {
+    background-position: center calc(50% + 100px);
+  }
+
+  @include aboveXLarge() {
+    min-height: 80vh;
+    background-position: center calc(50% + 80px);
+  }
 
   &:after {
     background: linear-gradient(

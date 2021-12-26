@@ -85,25 +85,32 @@
           display: flex;
           justify-content: space-between;
 
-          .title {
-            @include title();
-            font-size: 18px;
-
-            @include aboveLarge() {
-              font-size: 24px;
+          .text-info {
+            @include aboveMedium() {
+              padding-right: 30px;
             }
-          }
 
-          .date {
-            color: $title-color;
-            font-size: 14px;
-            font-weight: bold;
-            margin-top: 12px;
-          }
+            .title {
+              @include title();
+              font-size: 18px;
 
-          .description {
-            color: $title-color;
-            margin-top: 14px;
+              @include aboveLarge() {
+                font-size: 24px;
+              }
+            }
+
+            .date {
+              color: $title-color;
+              display: block;
+              font-size: 14px;
+              font-weight: bold;
+              margin-top: 12px;
+            }
+
+            .description {
+              color: $title-color;
+              margin-top: 14px;
+            }
           }
         }
 

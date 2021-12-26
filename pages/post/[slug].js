@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 
 import markdownToHtml from "../helpers/remark";
 import { getAllPosts, getPostBySlug } from "../helpers/api";
+import getFormattedDate from "../helpers/getFormattedDate";
 
 import ArrowLeft from "../../public/images/arrow-left.svg";
 
@@ -24,7 +25,7 @@ const Post = ({ post }) => {
         />
       </div>
       <main className={s.body}>
-        <small className={s.date}>{post.date}</small>
+        <small className={s.date}>{getFormattedDate(post.date)}</small>
         <h1 className={s.title}>{post.title}</h1>
         <h2 className={s.subtitle}>{post.description}</h2>
         <div
