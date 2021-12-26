@@ -1,3 +1,13 @@
+@keyframes starRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .hero {
   @include container();
   display: flex;
@@ -82,14 +92,29 @@
 
 .interests {
   background-color: $secondary-color-opacity;
-  padding: 40px 0;
-
-  @include aboveLarge() {
-    padding: 70px 0;
-  }
 
   .wrapper {
     @include container();
+    position: relative;
+    padding-bottom: 40px;
+    padding-top: 40px;
+
+    @include aboveLarge() {
+      padding-bottom: 70px;
+      padding-top: 70px;
+    }
+
+    .interests-star {
+      display: none;
+
+      @include aboveMedium() {
+        animation: starRotate 26s infinite linear;
+        display: block;
+        position: absolute;
+        right: 16px;
+        top: -64px;
+      }
+    }
   }
 
   .title {

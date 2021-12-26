@@ -68,6 +68,8 @@ export default function Home({ posts }) {
 
         <section className={s.interests}>
           <div className={s.wrapper}>
+            <img className={s["interests-star"]} src="icons/star.svg" alt="" />
+
             <h2 className={s.title}>interesses</h2>
 
             <ul className={s.list}>
