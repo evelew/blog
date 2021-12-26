@@ -1,9 +1,12 @@
 import Head from "next/head";
 import Link from "next/link";
 
+import { getLastPosts } from "./helpers/api";
+import getPostUrl from "./helpers/getPostUrl";
+
 import s from "../styles/Home.module.scss";
 
-export default function Home() {
+export default function Home({ posts }) {
   const interests = [
     {
       icon: "",
@@ -18,32 +21,13 @@ export default function Home() {
       name: "Assuntos relativos a liderança",
     },
   ];
-  const posts = [
-    {
-      image:
-        "https://images.unsplash.com/photo-1638292596909-5174a9f6ec11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=352&q=80",
-      date: "September 27, 2021",
-      title: "Criando atalhos para os comandos do git",
-      description:
-        "A vida é curta demais pra ficar digitando comandos longos ⌨️",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1638292596909-5174a9f6ec11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=352&q=80",
-      date: "September 27, 2021",
-      title: "Criando atalhos para os comandos do git",
-      description:
-        "A vida é curta demais pra ficar digitando comandos longos ⌨️",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1638292596909-5174a9f6ec11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=352&q=80",
-      date: "September 27, 2021",
-      title: "Criando atalhos para os comandos do git",
-      description:
-        "A vida é curta demais pra ficar digitando comandos longos ⌨️",
-    },
-  ];
+
+  const getCurrentlyAge = () => {
+    const today = new Date();
+    const birthday = new Date("06-12-1995");
+    return today.getFullYear() - birthday.getFullYear();
+  };
+
   return (
     <>
       <Head>
@@ -63,8 +47,8 @@ export default function Home() {
 
           <div className={s.text}>
             <p>
-              Eu sou a Evellyn, tenho 25 anos. Sou de Curitiba, mas agora tô
-              morando em São Paulo.
+              Eu sou a Evellyn, tenho {getCurrentlyAge()} anos. Sou de Curitiba,
+              mas agora tô morando em São Paulo.
             </p>
 
             <p>
@@ -111,14 +95,18 @@ export default function Home() {
           <ul className={s.list}>
             {posts.map((post, i) => (
               <li className={s.post} key={`posts-${i}`}>
-                <div className={s.image}>
-                  <img src={post.image} alt="" />
-                </div>
-                <div className={s["text-wrapper"]}>
-                  <small className={s.date}>{post.date}</small>
-                  <h3 className={s.title}>{post.title}</h3>
-                  <h4 className={s.description}>{post.description}</h4>
-                </div>
+                <Link href={getPostUrl(post.slug)}>
+                  <a>
+                    <div className={s.image}>
+                      <img src={post["cover_image"]} alt="" />
+                    </div>
+                    <div className={s["text-wrapper"]}>
+                      <small className={s.date}>{post.date}</small>
+                      <h3 className={s.title}>{post.title}</h3>
+                      <h4 className={s.description}>{post.description}</h4>
+                    </div>
+                  </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -126,4 +114,18 @@ export default function Home() {
       </main>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const posts = getLastPosts([
+    "cover_image",
+    "title",
+    "description",
+    "date",
+    "slug",
+  ]);
+
+  return {
+    props: { posts },
+  };
 }

@@ -4,7 +4,7 @@ import Link from "next/link";
 import ArrowRight from "../public/images/arrow-right.svg";
 
 import { getAllPosts } from "./helpers/api";
-import getFormattedDate from "./helpers/getFormattedDate";
+import getPostUrl from "./helpers/getPostUrl";
 
 import s from "../styles/Blog.module.scss";
 
@@ -48,13 +48,11 @@ export default function Home({ posts }) {
             <ul className={s.list}>
               {posts.map((post, i) => (
                 <li className={s.post} key={`posts-${i}`}>
-                  <Link href={`/post/${post.slug}`}>
+                  <Link href={getPostUrl(post.slug)}>
                     <a className={s["text-wrapper"]}>
                       <div className={s["text-info"]}>
                         <h3 className={s.title}>{post.title}</h3>
-                        <small className={s.date}>
-                          {getFormattedDate(post.date)}
-                        </small>
+                        <small className={s.date}>{post.date}</small>
                         <p className={s.description}>{post.description}</p>
                       </div>
 
@@ -75,7 +73,6 @@ export default function Home({ posts }) {
 
 export async function getStaticProps() {
   const posts = getAllPosts(["title", "description", "date", "slug"]);
-
   return {
     props: { posts },
   };
