@@ -7,7 +7,7 @@ credit_image: Foto tirada por Zach Lucero
 credit_image_author: https://unsplash.com/@zlucerophoto
 ---
 
-**Update:** Fiquei entre os 500 primeiros 🎉🎉🎉
+**Update:** Fiquei entre os 300 primeiros 🎉🎉🎉
 
 ---
 
