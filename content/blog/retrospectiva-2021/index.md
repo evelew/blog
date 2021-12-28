@@ -11,7 +11,7 @@ Resolvi postar essa retrospectiva pra lembrar tudo o que rolou nesse ano e compa
 
 - No começo desse ano defini pra qual lado pretendo seguir (tech x pessoas), eu escolhi seguir mais pro lado de pessoas pq era (e ainda é) o assunto que mais prendeu minha atenção e mais me animou nos últimos tempos.
 
-- Foi a primeira vez que conversei sobre qual caminho quero seguir com alguém da empresa que tô trabalhando e foi bom demais fazer isso, eu conversei com 2 diretores de tecnologia da RV, e eles super me incentivaram e deram várias ideias de como evoluir alguns em pontos que vão me ajudar muito a seguir por esse caminho.
+- Foi a primeira vez que conversei sobre qual caminho quero seguir com alguém da empresa que tô trabalhando e foi bom demais fazer isso, eu conversei com 2 diretores de tecnologia da RV e eles super me incentivaram e deram várias ideias de como evoluir alguns em pontos que vão me ajudar muito a seguir por esse caminho.
 
 - Esse ano eu terminei o MBA em engenharia de software que comecei no ano passado, confesso que quase desisti mas minha namorada me deu maior força pra terminar e deu boa. Durante o MBA eu aprendi sobre várias coisas diferentes e foi graças a ele que eu vi que o caminho que mais me chama atenção é o relacionado a pessoas/negócios. Nele eu tb fiz um projeto que curti muito, eu até fiz um [post sobre ele aqui no blog.](https://evellynlima.com.br/app-em-ionic-com-api-em-microservicos-rodando-no-docker/)
 
