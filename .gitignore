@@ -32,3 +32,8 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+/public/*
+!/public/images
+!/public/icons
+.cache

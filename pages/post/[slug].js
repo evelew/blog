@@ -18,6 +18,9 @@ const Post = ({ post }) => {
             <ArrowLeft />
           </button>
         </div>
+
+        <h1 className={s.title}>{post.title}</h1>
+
         <div
           className={s["hero-image"]}
           style={{ backgroundImage: `url(${post.cover_image})` }}
@@ -25,8 +28,7 @@ const Post = ({ post }) => {
       </div>
       <main className={s.body}>
         <small className={s.date}>{post.date}</small>
-        <h1 className={s.title}>{post.title}</h1>
-        <h2 className={s.subtitle}>{post.description}</h2>
+
         <div
           className={s.text}
           dangerouslySetInnerHTML={{ __html: post.content }}
@@ -41,7 +43,6 @@ export default Post;
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(params.slug, [
     "title",
-    "description",
     "date",
     "cover_image",
     "credit_image",

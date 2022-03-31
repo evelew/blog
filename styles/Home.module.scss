@@ -234,6 +234,7 @@
     .post {
       border: 1px solid #dcdcdc;
       border-radius: 4px;
+      overflow: hidden;
 
       &:not(:first-of-type) {
         margin-top: 24px;
@@ -252,6 +253,15 @@
         &:not(:first-of-type) {
           margin-top: 0;
         }
+
+        &:hover {
+          .image {
+            img {
+              transform: scale(1.1);
+              transition: transform 0.3s ease;
+            }
+          }
+        }
       }
 
       .image {
@@ -264,6 +274,11 @@
         img {
           display: block;
           width: 100%;
+
+          @include aboveLarge() {
+            transform: scale(1);
+            transition: transform 0.3s ease;
+          }
         }
       }
 
