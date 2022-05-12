@@ -1,3 +1,19 @@
+@keyframes sparklesName {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes strokeFill {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 @keyframes starRotate {
   0% {
     transform: rotate(0deg);
@@ -8,6 +24,20 @@
   }
 }
 
+@keyframes starEyebrowns {
+  0% {
+    transform: translateY(-5px);
+  }
+
+  50% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
 .hero {
   @include container();
   display: flex;
@@ -15,8 +45,14 @@
   justify-content: center;
   min-height: 60vh;
 
+  @include aboveMedium() {
+    align-items: center;
+    flex-flow: row;
+  }
+
   @include aboveLarge() {
-    min-height: 100vh;
+    justify-content: space-between;
+    min-height: 80vh;
   }
 
   .title {
@@ -24,6 +60,7 @@
     color: $primary-color;
     font-size: 46px;
     font-weight: normal;
+    position: relative;
 
     @include aboveMedium() {
       font-size: 52px;
@@ -32,10 +69,24 @@
     @include aboveLarge() {
       font-size: 120px;
     }
+
+    &:after {
+      animation: sparklesName .3s ease-in;
+      content: url('/images/sparkles-name.svg');
+      display: block;
+      position: absolute;
+      right: -80px;
+      top: -25px;
+      width: 40px;
+
+      @include aboveLarge() {
+        width: 94px;
+      }
+    }
   }
 
   .subtitle {
-    color: $primary-color;
+    color: $title-color;
     font-size: 18px;
     font-weight: normal;
     margin-top: 12px;
@@ -43,6 +94,38 @@
     @include aboveLarge() {
       font-size: 42px;
       margin-top: 12px;
+    }
+  }
+
+  .image {
+    max-width: 180px;
+    position: relative;
+
+    @include aboveMedium() {
+      max-width: 340px;
+    }
+
+    @include aboveLarge() {
+      max-width: 500px;
+    }
+
+    .arrow-illustration {
+
+      bottom: 0;
+      // content: url('/images/arrow-illustration.svg');
+      display: block;
+      left: -180px;
+      position: absolute;
+
+      .path {
+        animation: strokeFill 1.4s ease-in-out forwards;
+        stroke-dasharray: 1200;
+        stroke-dashoffset: 1200;
+      }
+    }
+
+    img {
+      width: 100%;
     }
   }
 }
@@ -63,6 +146,15 @@
   .title {
     @include title();
     flex: 1;
+    position: relative;
+
+    &:after {
+      content: url('/images/arrow-about.svg');
+      display: block;
+      left: 160px;
+      position: absolute;
+      top: 50px;
+    }
   }
 
   .text {
@@ -98,21 +190,55 @@
     position: relative;
     padding-bottom: 40px;
     padding-top: 40px;
+    position: relative;
 
     @include aboveLarge() {
       padding-bottom: 70px;
       padding-top: 70px;
     }
 
+    &:before {
+      content: url('/images/bracket-left.svg');
+      display: block;
+      left: 60px;
+      position: absolute;
+      top: 140px;
+    }
+
+    &:after {
+      content: url('/images/bracket-right.svg');
+      display: block;
+      position: absolute;
+      right: 60px;
+      top: 140px;
+    }
+
     .interests-star {
       display: none;
 
       @include aboveMedium() {
-        animation: starRotate 26s infinite linear;
+        animation: starRotate 10s infinite linear;
         display: block;
         position: absolute;
         right: 16px;
         top: -64px;
+      }
+
+      &:hover {
+        animation-play-state: paused;
+
+        &:after {
+          animation: starEyebrowns .3s ease-in;
+        }
+
+      }
+
+      &:after {
+        content: url('/images/star-eyebrowns.svg');
+        display: block;
+        left: 45px;
+        position: absolute;
+        top: 30px;
       }
     }
   }
@@ -175,7 +301,6 @@
   padding-top: 40px;
 
   @include aboveLarge() {
-    padding-bottom: 192px;
     padding-top: 136px;
   }
 
@@ -234,6 +359,7 @@
     .post {
       border: 1px solid #dcdcdc;
       border-radius: 4px;
+      position: relative;
       overflow: hidden;
 
       &:not(:first-of-type) {
@@ -280,6 +406,15 @@
             transition: transform 0.3s ease;
           }
         }
+      }
+
+      .new {
+        background-color: $primary-color;
+        border-radius: 20px;
+        padding: 0px 8px;
+        position: absolute;
+        top: 136px;
+        right: 20px;
       }
 
       .text-wrapper {

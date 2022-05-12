@@ -12,18 +12,18 @@ const Header = () => {
       name: "home",
       href: "/",
     },
-    {
-      name: "projetos",
-      href: "/projetos",
-    },
+    // {
+    //   name: "projetos",
+    //   href: "/projetos",
+    // },
     {
       name: "blog",
       href: "/blog",
     },
-    {
-      name: "contato",
-      href: "/contato",
-    },
+    // {
+    //   name: "contato",
+    //   href: "/contato",
+    // },
   ];
 
   return (
